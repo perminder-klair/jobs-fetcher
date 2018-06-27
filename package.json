@@ -1,22 +1,27 @@
 {
-  "name": "rollup-starter-lib",
+  "name": "jobs-fetcher",
   "version": "1.0.0",
-  "main": "dist/how-long-till-lunch.cjs.js",
-  "module": "dist/how-long-till-lunch.esm.js",
-  "browser": "dist/how-long-till-lunch.umd.js",
-  "dependencies": {
-    "ms": "^2.0.0"
-  },
-  "devDependencies": {
-    "rollup": "^0.60.0",
-    "rollup-plugin-commonjs": "^9.1.0",
-    "rollup-plugin-node-resolve": "^3.0.0"
-  },
+  "main": "dist/main.cjs.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "test": "node test/test.js",
-    "pretest": "npm run build"
+    "test": "mocha",
+    "pretest": "npm run build",
+    "lint": "eslint --fix --ext .js src/"
+  },
+  "dependencies": {
+    "scrape-it": "^5.0.5",
+    "striptags": "^3.1.1",
+    "turndown": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-prettier": "^2.6.1",
+    "mocha": "^5.2.0",
+    "rollup": "^0.60.0"
   },
   "files": [
     "dist"
