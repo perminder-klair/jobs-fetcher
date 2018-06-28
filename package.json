@@ -1,6 +1,6 @@
 {
   "name": "jobs-fetcher",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/main.cjs.js",
   "scripts": {
     "build": "rollup -c",
