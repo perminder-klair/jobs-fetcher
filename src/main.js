@@ -51,10 +51,14 @@ export async function fetchIndeedJob(url) {
           selector: '#job_summary div',
           how: 'html',
           convert: (x) => {
+            if (x === null) {
+              return '';
+            }
             const turndown = new Turndown();
             return turndown.turndown(x);
           },
         },
+        salary: 'span.no-wrap',
       })
         .then(({ data, response }) => {
           if (response.statusCode !== 200) reject(new Error('data fetch failed'));
@@ -131,6 +135,9 @@ export async function fetchReedJob(url) {
           selector: '.description span[itemprop="description"]',
           how: 'html',
           convert: (x) => {
+            if (x === null) {
+              return '';
+            }
             const turndown = new Turndown();
             return turndown.turndown(x);
           },
