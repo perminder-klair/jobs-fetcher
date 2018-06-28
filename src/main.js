@@ -10,18 +10,18 @@ export async function fetchIndeedJobs(url) {
         jobs: {
           listItem: '.row.result',
           data: {
-            title: {
+            jobTitle: {
               selector: '.jobtitle > a',
               how: 'html',
               convert: x => striptags(x),
             },
-            url: {
+            jobUrl: {
               selector: '.jobtitle > a',
               attr: 'href',
               convert: x => `https://www.indeed.co.uk${x}`,
             },
-            location: '.location',
-            company: '.company',
+            locationName: '.location',
+            employerName: '.company',
           },
         },
       })
