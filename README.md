@@ -1,5 +1,7 @@
 # Jobs data fetcher
 
+[![Build Status](https://travis-ci.com/perminder-klair/jobs-fetcher.svg?branch=master)](https://travis-ci.com/perminder-klair/jobs-fetcher)
+
 Fetch data from REED.co.uk and Indeed.co.uk and turn into JSON.
 
 ## Scripts
